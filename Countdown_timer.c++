@@ -9,7 +9,7 @@ int main(void)
     cin >> second;
     while (second > 0)
     {
-        system("clear");
+        system("cls");
         cout << "Time left : " << second << " seconds\n";
         sleep(1);
         second--;
