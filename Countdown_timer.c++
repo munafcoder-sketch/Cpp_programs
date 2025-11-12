@@ -7,7 +7,7 @@ int main(void)
     int second;
     cout << "Enter time in second : ";
     cin >> second;
-    while (second < 0)
+    while (second > 0)
     {
         system("clear");
         cout << "Time left : " << second << " seconds\n";
