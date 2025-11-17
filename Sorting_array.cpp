@@ -1,4 +1,5 @@
 #include <iostream>
+// I can use array library but masti dekho iski
 using namespace std;
 
 int main()
