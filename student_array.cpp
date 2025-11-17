@@ -5,7 +5,7 @@ int main()
 {
     string std_name[3];
 
-    cout << "Enter name of students: ";
+    cout << "Enter name of students: \n";
     for (string &name : std_name) // ✔ use string reference
     {
         cin >> name;
@@ -15,4 +15,7 @@ int main()
     {
         cout << name << " ";
     }
+
+    system("pause");
+    return 0;
 }

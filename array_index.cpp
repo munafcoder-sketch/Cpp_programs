@@ -11,5 +11,6 @@ int main()
     {
         cout << setw(7) << i << setw(13) << n[i] << endl;
     }
+    system("pause");
     return 0;
 }

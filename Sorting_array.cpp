@@ -33,6 +33,6 @@ int main()
         cout << arr[i] << "  ";
     }
     cout << "]";
-
+    system("pause");
     return 0;
 }

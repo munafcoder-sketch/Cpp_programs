@@ -16,5 +16,6 @@ int main(void)
     }
     system("cls");
     cout << "Times up : " << endl;
+    system("pause");
     return 0;
 }

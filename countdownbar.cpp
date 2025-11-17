@@ -22,5 +22,6 @@ int main()
         usleep(100000); // 0.1 second delay
     }
     cout << "\nTime's up!" << endl;
+    system("pause");
     return 0;
 }
