@@ -36,13 +36,16 @@ int main()
             cin >> std_score[i][j];
             total_marks += std_score[i][j];
         }
-        cout << "Total marks obtianed by " << std_name[i] << " is " << total_marks;
+        cout << "Total marks obtianed by " << std_name[i] << " is " << total_marks << endl;
         average = float(total_marks) / num_courses;
-        cout << "Average obtained by : " << std_name[i] << " " << average;
+        cout << "Average obtained by : " << std_name[i] << " " << average << endl;
         class_total += total_marks;
     }
+
+    // Calculating class average
+
     class_average = float(total_marks) / num_std;
-    cout << "The class average is " << class_average;
+    cout << "The class average is " << class_average << endl;
     system("pause");
     return 0;
 }
