@@ -3,6 +3,7 @@
 using namespace std;
 int main()
 {
+    cout << "******Welcome to average calculator of your class*********\n "; // created by Munafaaa
     int num_std, num_courses;
     cout << "Enter number of students in class : " << endl;
     cin >> num_std;
