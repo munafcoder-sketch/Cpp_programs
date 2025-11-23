@@ -2,6 +2,9 @@
 #include <string>
 
 using namespace std;
+
+// Factorail function
+
 double factorial(int n)
 {
     double fact = 1;
@@ -11,6 +14,20 @@ double factorial(int n)
     }
     return fact;
 }
+
+// Calculate nCr bionomial theorem
+
+int nCr(int n, int r)
+{
+    int nfact = factorial(n);
+    int rfact = factorial(r);
+    int nmrfact = factorial(n - r);
+
+    return nfact / (rfact * nmrfact);
+}
+
+// Calculating min value function
+
 int myMin(int a, int b)
 {
     if (a < b)
@@ -18,6 +35,8 @@ int myMin(int a, int b)
     else
         return b;
 }
+
+// print array function
 
 void printarr(int arr[], int size_arr)
 {
@@ -27,6 +46,8 @@ void printarr(int arr[], int size_arr)
     }
     cout << endl;
 }
+
+// sum of digit function
 
 int sumofdigit(int num)
 {
@@ -40,13 +61,18 @@ int sumofdigit(int num)
     return digitsum;
 }
 
+// Main function
+
 int main(void)
 {
-    // Calling factorial function
-    int n;
+    // Calling factorial and bionimial theorem function
+    int n, r;
     cout << "Enter any number to find factorial : " << endl;
     cin >> n;
     cout << "The factorial of " << n << " is " << factorial(n) << endl;
+    cout << "Enter value of r to claculate nCr" << endl;
+    cin >> r;
+    cout << "The nCr is " << nCr(n, r) << endl;
 
     // Calling Mymin function
     cout << "Min value is: " << myMin(10, 20) << endl;
@@ -59,7 +85,7 @@ int main(void)
     // calling sum of digit function
     int number;
     cin >> number;
-    cout << "Ther sum of your number is " << sumofdigit(number) << endl;
+    cout << "Ther sum of your digit is " << sumofdigit(number) << endl;
     system("pause");
     return 0;
 }
