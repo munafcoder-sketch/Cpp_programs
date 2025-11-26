@@ -11,18 +11,33 @@ int main()
     {
         cout << i << " ";
     }
-    cout << "\n After adding more element : \n";
+    cout << "\nAfter adding more element : \n";
     vec.push_back(3);
     vec.push_back(5);
     for (int i : vec)
     {
         cout << i << " ";
     }
-    cout << "After removing last two elements : \n";
+    cout << "\nAfter removing last two elements : \n";
     vec.pop_back();
     vec.pop_back();
     for (int i : vec)
         cout << i << " ";
+    // identify the unique number in array
+
+    vector<int> myarr = {12, 4, 6, 8, 4, 12, 8};
+    int ans = 0;
+    for (int val : myarr)
+    {
+        ans = ans ^ val; //   ^ this is XOR it you know what is the function check your dawod dairy
+    }
+    cout << "\nThe unique value is " << ans << endl;
+    for (int i : myarr)
+    {
+        cout << i << " ";
+    }
+    cout << endl;
+
     system("pause");
     return 0;
 }
