@@ -46,7 +46,17 @@ int main()
         }
     }
     cout << "\nThe maximum sum of subarray is : " << max_sum << endl;
-
+    int kadane_sum = INT_MIN;
+    int curr_sum = 0;
+    // calculating maximum sum using kadane's algorithm "Most optimise way"
+    for (short i = 0; i < num; i++)
+    {
+        curr_sum += arr[i];
+        kadane_sum = max(curr_sum, kadane_sum);
+        if (curr_sum < 0)
+            curr_sum = 0;
+    }
+    cout << "The maximum sum of subarray by using Kadane's algorithm : " << kadane_sum << endl;
     system("pause");
     return 0;
 }
