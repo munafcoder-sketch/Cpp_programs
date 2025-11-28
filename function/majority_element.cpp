@@ -59,6 +59,29 @@ int majorityelement(vector<int> &arr)
     return -1;
 }
 
+// moore algorithm most optimise way
+int moore_algorithm(vector<int> &arr)
+{
+    int fre = 0, ans = 0;
+    int n = arr.size();
+    for (int i = 0; i < n; i++)
+    {
+        if (fre == 0)
+        {
+            ans = arr[i];
+        }
+        if (ans == arr[i])
+        {
+            fre++;
+        }
+        else
+        {
+            fre--;
+        }
+    }
+    return ans;
+}
+
 int main()
 {
     // calling functoin using brute method
@@ -68,6 +91,7 @@ int main()
 
     // NOw using more optimise method
     cout << "The majority elemnts present in array is : " << majorityelement(myarr) << endl;
+    cout << "The majority elemnts present in array is : " << moore_algorithm(myarr) << endl;
 
     system("pause");
     return 0;
