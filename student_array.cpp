@@ -4,11 +4,13 @@ using namespace std;
 
 void store_name(int size, string students_name[])
 {
+    cout << endl;
     for (int i = 0; i < size; i++)
     {
-        cout << "Enter name of " << i + 1 << " student : " << endl;
+        cout << "Enter name of " << i + 1 << " student : ";
         cin >> students_name[i];
     }
+    cout << endl;
 }
 
 void store_courses(int size, string students_courses[])
@@ -19,15 +21,17 @@ void store_courses(int size, string students_courses[])
         cout << "Enter name of " << i + 1 << " course : ";
         cin >> students_courses[i];
     }
+    cout << endl;
 }
 
 int main()
 {
-    cout << "******Welcome to average calculator of your class*********\n "; // created by Munafaaa
+    cout << "******Welcome to average calculator of your class*********\n"
+         << endl; // created by Munafaaa
     int num_std, num_courses;
-    cout << "Enter number of students in class : " << endl;
+    cout << "Enter number of students in class : ";
     cin >> num_std;
-    cout << "Enter number of courses : " << endl;
+    cout << "Enter number of courses : ";
     cin >> num_courses;
     string std_name[num_std], std_courses[num_courses];
     int std_score[num_std][num_courses], total_marks = 0, class_total;
@@ -39,10 +43,11 @@ int main()
     // Storing score in array, clacluating total and average
     for (int i = 0; i < num_std; i++)
     {
+        total_marks = 0;
         cout << "Enter score of : " << std_name[i] << endl;
         for (int j = 0; j < num_courses; j++)
         {
-            cout << "Enter obtain marks in : " << std_courses[j] << endl;
+            cout << "Enter obtain marks in " << std_courses[j] << " : ";
             cin >> std_score[i][j];
             total_marks += std_score[i][j];
         }
@@ -50,6 +55,7 @@ int main()
         average = float(total_marks) / num_courses;
         cout << "Average obtained by : " << std_name[i] << " " << average << endl;
         class_total += total_marks;
+        cout << endl;
     }
 
     // Calculating class average
