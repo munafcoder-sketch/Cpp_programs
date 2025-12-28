@@ -1,6 +1,26 @@
 #include <iostream>
 #include <string>
 using namespace std;
+
+void store_name(int size, string students_name[])
+{
+    for (int i = 0; i < size; i++)
+    {
+        cout << "Enter name of " << i + 1 << " student : " << endl;
+        cin >> students_name[i];
+    }
+}
+
+void store_courses(int size, string students_courses[])
+{
+    // Taking name of courses input and save in array
+    for (int i = 0; i < size; i++)
+    {
+        cout << "Enter name of " << i + 1 << " course : ";
+        cin >> students_courses[i];
+    }
+}
+
 int main()
 {
     cout << "******Welcome to average calculator of your class*********\n "; // created by Munafaaa
@@ -13,19 +33,8 @@ int main()
     int std_score[num_std][num_courses], total_marks = 0, class_total;
     float average, class_average;
 
-    // taking students name input and store it in array
-    for (string &name : std_name)
-    {
-        cout << "Enter name of student: ";
-        cin >> name;
-    }
-
-    // Taking name of courses input and save in array
-    for (int i = 0; i < num_courses; i++)
-    {
-        cout << "Enter name of " << i + 1 << " course : ";
-        cin >> std_courses[i];
-    }
+    store_name(num_std, std_name);
+    store_courses(num_courses, std_courses);
 
     // Storing score in array, clacluating total and average
     for (int i = 0; i < num_std; i++)
