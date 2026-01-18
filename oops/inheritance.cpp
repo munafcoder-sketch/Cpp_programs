@@ -88,6 +88,8 @@ public:
 
 int main()
 {
+    student s1("Aayan", 20, 83);
+    s1.stdinfo();
     MSstd m1("Munaf Ahmed", 19, 98, "Computer Science", 50000, "bs cyber security");
     m1.MSintro();
     return 0;
